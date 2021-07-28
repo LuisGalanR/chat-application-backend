@@ -27,7 +27,7 @@ io.on('connection', (socket) => {
     socket.emit('user-list', [...userList.keys()]);
 
     socket.on('message', (msg) => {
-        socket.broadcast.emit('message-broacast', {message: msg, userName: userName});
+        socket.broadcast.emit('message-broadcast', {message: msg, userName: userName});
     })
 
     socket.on('disconnect', (reason) => {
@@ -37,7 +37,8 @@ io.on('connection', (socket) => {
 });
 
 function addUser(userName, id) {
-    if(userList.has(userName)){
+    debugger
+    if(!userList.has(userName)){
         userList.set(userName, new Set(id));
     }else{
         userList.get(userName).add(id);

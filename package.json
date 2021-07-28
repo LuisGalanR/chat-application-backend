@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/LuisGalanR/chat-application-backend#readme",
   "dependencies": {
-    "@types/socket.io": "^3.0.2",
     "express": "^4.17.1",
-    "socket.io": "^4.1.2"
+    "socket.io": "^4.1.2",
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.7",
+    "socket.io-client": "^4.0.1"
   }
 }
